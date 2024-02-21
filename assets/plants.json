@@ -291,9 +291,188 @@
       "lien_vers_photo_millepertuis2.jpg"
     ],
     "conservation_status": "Non menacée"
+  },
+  {
+    "id": "melisse-001",
+    "common_name": "Mélisse",
+    "scientific_name": "Melissa officinalis",
+    "family": "Lamiaceae",
+    "description": "Plante vivace aromatique, utilisée pour ses feuilles au parfum citronné. Appréciée en phytothérapie pour ses propriétés apaisantes et digestives.",
+    "height": "50 à 80 cm",
+    "leaves": {
+      "description": "Feuilles vert foncé, ovales, dentées, avec un parfum citronné lorsqu'elles sont froissées.",
+      "color": "Vert foncé"
+    },
+    "flowers": {
+      "description": "Petites fleurs blanches ou légèrement rosées, regroupées en verticilles.",
+      "blooming_period": "Juin à septembre"
+    },
+    "habitat": "Originaire d'Europe du Sud et de la région méditerranéenne, cultivée dans les jardins et utilisée comme plante médicinale.",
+    "uses": "Infusions pour soulager l'anxiété, l'insomnie, les troubles digestifs. Utilisée également en cuisine pour aromatiser plats et boissons.",
+    "advantages": [
+      "Facile à cultiver.",
+      "Propriétés calmantes et digestives."
+    ],
+    "disadvantages": [
+      "Peut devenir envahissante.",
+      "Attire les abeilles et les insectes."
+    ],
+    "cultivation_tips": {
+      "soil": "Sol riche, frais et bien drainé.",
+      "exposure": "Soleil à mi-ombre.",
+      "watering": "Maintenir le sol humide, surtout durant les périodes sèches.",
+      "maintenance": "Tailler après la floraison pour encourager une croissance compacte."
+    },
+    "photos": [
+      "lien_vers_photo_melisse1.jpg",
+      "lien_vers_photo_melisse2.jpg"
+    ],
+    "conservation_status": "Non menacée"
+  },
+  {
+    "id": "ginkgo-001",
+    "common_name": "Ginkgo",
+    "scientific_name": "Ginkgo biloba",
+    "family": "Ginkgoaceae",
+    "description": "Arbre caducifolié, l'un des plus anciens types d'arbres existants. Reconnu pour sa résistance et ses feuilles en forme d'éventail uniques.",
+    "height": "Jusqu'à 30 mètres ou plus",
+    "leaves": {
+      "description": "Feuilles en forme d'éventail, vert clair, se colorant en jaune vif à l'automne.",
+      "color": "Vert clair"
+    },
+    "flowers": {
+      "description": "L'arbre est dioïque, avec des fleurs mâles et femelles sur des individus séparés. Les fleurs sont peu remarquables.",
+      "blooming_period": "Printemps"
+    },
+    "habitat": "Originaire de Chine, largement planté dans les villes et les jardins du monde entier pour son aspect ornemental et sa tolérance à la pollution.",
+    "uses": "Les feuilles sont utilisées en phytothérapie pour améliorer la mémoire et la circulation sanguine.",
+    "advantages": [
+      "Très résistant à la pollution et aux maladies.",
+      "Longue durée de vie."
+    ],
+    "disadvantages": [
+      "Les fruits des arbres femelles dégagent une odeur désagréable lorsqu'ils tombent et pourrissent."
+    ],
+    "cultivation_tips": {
+      "soil": "Adaptable à de nombreux types de sol, préfère un sol bien drainé.",
+      "exposure": "Plein soleil.",
+      "watering": "Résistant à la sécheresse une fois établi.",
+      "maintenance": "Peu d'entretien nécessaire. Prévoir un espace suffisant pour sa croissance."
+    },
+    "photos": [
+      "lien_vers_photo_ginkgo1.jpg",
+      "lien_vers_photo_ginkgo2.jpg"
+    ],
+    "conservation_status": "Non menacée"
+  },
+  {
+    "id": "valeriane-001",
+    "common_name": "Valériane",
+    "scientific_name": "Valeriana officinalis",
+    "family": "Valerianaceae",
+    "description": "Plante herbacée vivace, appréciée pour ses propriétés sédatives et relaxantes. Utilisée pour traiter l'insomnie et l'anxiété.",
+    "height": "30 à 150 cm",
+    "leaves": {
+      "description": "Feuilles composées, vert foncé, avec des folioles dentées.",
+      "color": "Vert foncé"
+    },
+    "flowers": {
+      "description": "Petites fleurs roses ou blanches, regroupées en corymbes.",
+      "blooming_period": "Mai à juillet"
+    },
+    "habitat": "Préfère les zones humides et les sols riches en bordure de cours d'eau, dans les prairies et les forêts claires.",
+    "uses": "Racine utilisée en infusion ou en extrait pour ses effets calmants.",
+    "advantages": [
+      "Facile à cultiver.",
+      "Propriétés médicinales pour le sommeil et l'anxiété."
+    ],
+    "disadvantages": [
+      "Peut devenir envahissante dans des conditions optimales."
+    ],
+    "cultivation_tips": {
+      "soil": "Sol riche et humide.",
+      "exposure": "Soleil à mi-ombre.",
+      "watering": "Arrosage régulier pour maintenir le sol constamment humide.",
+      "maintenance": "Diviser les touffes tous les 2-3 ans pour revitaliser la plante."
+    },
+    "photos": [
+      "lien_vers_photo_valeriane1.jpg",
+      "lien_vers_photo_valeriane2.jpg"
+    ],
+    "conservation_status": "Non menacée"
+  },
+  {
+    "id": "romarin-001",
+    "common_name": "Romarin",
+    "scientific_name": "Rosmarinus officinalis",
+    "family": "Lamiaceae",
+    "description": "Arbuste persistant aromatique, prisé en cuisine pour ses feuilles parfumées et en phytothérapie pour ses propriétés antioxydantes.",
+    "height": "Jusqu'à 2 mètres",
+    "leaves": {
+      "description": "Feuilles fines, allongées, de couleur vert foncé, avec un revers blanchâtre.",
+      "color": "Vert foncé"
+    },
+    "flowers": {
+      "description": "Petites fleurs bleues, roses ou blanches, regroupées le long des branches.",
+      "blooming_period": "Printemps, parfois jusqu'en automne"
+    },
+    "habitat": "Originaire de la région méditerranéenne, il est largement cultivé dans les jardins du monde entier.",
+    "uses": "Feuilles utilisées pour aromatiser les plats. Huile essentielle utilisée pour ses vertus thérapeutiques.",
+    "advantages": [
+      "Résistant à la sécheresse.",
+      "Propriétés culinaires et médicinales."
+    ],
+    "disadvantages": [
+      "Sensible au froid et à l'excès d'humidité au niveau des racines."
+    ],
+    "cultivation_tips": {
+      "soil": "Sol bien drainé, léger, même calcaire.",
+      "exposure": "Plein soleil.",
+      "watering": "Arroser modérément, tolère bien la sécheresse.",
+      "maintenance": "Tailler pour stimuler une croissance touffue."
+    },
+    "photos": [
+      "lien_vers_photo_romarin1.jpg",
+      "lien_vers_photo_romarin2.jpg"
+    ],
+    "conservation_status": "Non menacée"
+  },
+  {
+    "id": "curcuma-001",
+    "common_name": "Curcuma",
+    "scientific_name": "Curcuma longa",
+    "family": "Zingiberaceae",
+    "description": "Plante vivace rhizomateuse, connue pour son rhizome orange utilisé comme épice et pour ses propriétés médicinales.",
+    "height": "60 à 90 cm",
+    "leaves": {
+      "description": "Grandes feuilles lancéolées, vert brillant, enveloppant le rhizome.",
+      "color": "Vert brillant"
+    },
+    "flowers": {
+      "description": "Fleurs jaunes ou blanches, réunies en inflorescence protégée par des bractées colorées.",
+      "blooming_period": "Fin de l'été"
+    },
+    "habitat": "Originaire du Sud de l'Asie, cultivé principalement en Inde et dans les régions tropicales.",
+    "uses": "Rhizome utilisé en poudre comme épice (curry) et pour ses propriétés anti-inflammatoires.",
+    "advantages": [
+      "Riche en composés bénéfiques pour la santé.",
+      "Utilisations culinaires et médicinales diverses."
+    ],
+    "disadvantages": [
+      "Nécessite un climat chaud et humide, difficile à cultiver dans les régions tempérées."
+    ],
+    "cultivation_tips": {
+      "soil": "Sol riche, bien drainé.",
+      "exposure": "Ombre légère ou soleil filtré.",
+      "watering": "Maintenir le sol constamment humide mais non détrempé.",
+      "maintenance": "Protéger du gel et des températures froides."
+    },
+    "photos": [
+      "lien_vers_photo_curcuma1.jpg",
+      "lien_vers_photo_curcuma2.jpg"
+    ],
+    "conservation_status": "Non menacée"
   }
-
-
 
 
 
