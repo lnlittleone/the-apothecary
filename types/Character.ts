@@ -1,16 +1,16 @@
-import type {Origin, Location} from "~/types/Location";
+import type {Location, Origin} from "~/types/Location";
 
 export type Character = {
-    id: number,
-    name?:string,
-    status?:string,
-    species?:string,
-    type?:string,
-    gender?:string,
+    id?: number,
+    name?: string,
+    status?: string,
+    species?: string,
+    type?: string,
+    gender?: string,
     origin?: Origin,
     location?: Location,
-    image?:string,
-    episode?:string[],
-    url?:string,
-    created?:string
+    image?: string,
+    episode?: string[],
+    url?: string,
+    created?: string
 }

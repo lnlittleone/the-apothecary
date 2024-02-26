@@ -8,19 +8,33 @@ const {id, image, name, status, species, type, location} = defineProps<Character
 </script>
 
 <template>
-  <v-card>
+  <v-card
+    class="pb-3"
+    border
+    flat
+  >
     <v-img
-      width="300"
-      cover
       :src="image"
+      cover
+      max-width="250"
     />
-    <v-card-title>{{ name }}</v-card-title>
-    <v-card-subtitle>{{ status }}</v-card-subtitle>
-    <v-card-text>{{ type }}</v-card-text>
+
+    <v-list-item
+      class="mb-2"
+      :subtitle="species"
+    >
+      <template #title>
+        <strong class="text-h6 mb-2">{{ name }}</strong>
+      </template>
+    </v-list-item>
+
     <v-card-actions>
-      <v-btn>
-        Go to {{ name }} details
-      </v-btn>
+      <NuxtLink :to="`/character/${id}`">
+        <v-btn
+
+          text="Go to {{name}} details"
+        />
+      </nuxtlink>
     </v-card-actions>
   </v-card>
 </template>

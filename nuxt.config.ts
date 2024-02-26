@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+        pages: true,
         devtools: {enabled: true},
         runtimeConfig: {
             public: {
