@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h2>LOCATIONS</h2>
+  <h2>Episodes</h2>
 </template>
 
 <style scoped>
