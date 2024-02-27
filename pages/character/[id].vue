@@ -5,8 +5,8 @@ import ItemDescription from "~/components/ItemDescription.vue";
 
 const {params} = useRoute()
 
-const {data, pending, error} = await useFetch(`https://rickandmortyapi.com/api/character/${params.id}`)
-const character = data.value
+const {data: character, pending, error} = await useFetch(`https://rickandmortyapi.com/api/character/${params.id}`)
+
 const numberOfEpisodes = character.episode.length
 const firstEpisode = await useFetch(character.episode[0]).data
 const lastEpisode = await useFetch(character.episode[character.episode.length - 1]).data

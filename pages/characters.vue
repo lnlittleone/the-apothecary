@@ -1,7 +1,6 @@
-<script setup lang="ts">
+<script setup>
 
-
-const {data, pending, error, refresh} = await useFetch('https://rickandmortyapi.com/api/character')
+const {data: characters, error, pending} = useFetch('https://rickandmortyapi.com/api/character')
 
 const page = ref(1)
 
@@ -16,10 +15,18 @@ const prevPage = () => {
 </script>
 
 <template>
-  <v-card>
+  <div v-if="error">
+    <p>Oupsie, it does not seem we can answer your request</p>
+  </div>
+  <div v-else-if="pending">
+    <v-progress-circular
+      indeterminate
+      color="purple"
+    />
+  </div>
+  <v-card v-else>
     <v-data-iterator
-      :items="data.results"
-      :items-per-page="3"
+      :items="characters.results"
     >
       <template #header>
         <v-toolbar class="px-2" />
@@ -32,7 +39,7 @@ const prevPage = () => {
         >
           <v-row dense>
             <v-col
-              v-for="item in data.results"
+              v-for="item in characters.results"
               :key="item.name"
               cols="auto"
             >
@@ -57,11 +64,11 @@ const prevPage = () => {
           />
 
           <div class="mx-2 text-caption">
-            Page {{ page }} of {{ data.info.pages }}
+            Page {{ page }} of {{ characters.info.pages }}
           </div>
 
           <v-btn
-            :disabled="page >= data.info.pages"
+            :disabled="page >= characters.info.pages"
             icon="mdi-arrow-right"
             density="comfortable"
             variant="tonal"

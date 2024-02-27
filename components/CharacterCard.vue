@@ -3,7 +3,7 @@
 
 import type {Character} from "~/types/Character";
 
-const {id, image, name, status, species, type, location} = defineProps<Character>()
+const {id, image, name, species} = defineProps<Character>()
 
 </script>
 
