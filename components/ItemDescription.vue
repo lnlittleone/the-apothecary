@@ -20,7 +20,6 @@ const {title, description} = defineProps<{ title: string, description: string }>
 
 .description {
   margin: 0;
-
 }
 
 </style>
