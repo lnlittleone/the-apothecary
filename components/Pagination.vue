@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {usePagination} from "~/composables/usePagination";
-import type {Info} from "~/types/Info";
 
-const {pages} = defineProps<Info>()
-const {page, goNext, goPrev} = usePagination()
-console.log(page, 'PAG')
-
+const {page, pages, goPrev, goNext} = defineProps<{
+  page: number,
+  pages: number,
+  goPrev: () => void,
+  goNext: () => void
+}>()
 </script>
 
 <template>
@@ -33,7 +33,3 @@ console.log(page, 'PAG')
     />
   </div>
 </template>
-
-<style scoped>
-
-</style>

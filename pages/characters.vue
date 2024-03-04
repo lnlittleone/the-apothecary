@@ -1,30 +1,20 @@
 <script setup>
-import Pagination from "~/components/Pagination.vue";
-import {usePagination} from "~/composables/usePagination.js";
 
-const {page} = usePagination()
+import {useFetchAllData} from "~/composables/useFetchAllData.js";
+import {characterURl} from "~/constants.js";
 
-const {
-  data: characters,
-  error,
-  pending,
-} = useFetch(`https://rickandmortyapi.com/api/character`, {
-  query: {page: page.value},
-
-});
+const page = ref(1)
+const {data: characters, error, pending} = useFetchAllData(characterURl, page)
 
 </script>
 
 <template>
-  <div v-if="error">
-    <p>Oupsie, it does not seem we can answer your request</p>
-  </div>
-  <div v-else-if="pending">
-    <v-progress-circular
-        indeterminate
-        color="purple"
-    />
-  </div>
+  <v-card v-if="error">
+    <v-card-text>Something went wrong</v-card-text>
+  </v-card>
+  <v-card v-else-if="pending">
+    <v-card-text>Loading...</v-card-text>
+  </v-card>
   <v-card v-else>
     <v-data-iterator
         :items="characters.results"
@@ -54,9 +44,5 @@ const {
       </template>
     </v-data-iterator>
   </v-card>
-  <pagination :pages="characters.info.pages"/>
+  <pagination :page="page" :pages="characters?.info.pages" :go-next="() => page++" :go-prev="() => page--"/>
 </template>
-
-<style scoped>
-
-</style>

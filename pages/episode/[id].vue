@@ -1,11 +1,12 @@
 <script setup>
 import ItemDescription from "~/components/ItemDescription.vue";
+import {episodeURl} from "~/constants.js";
 import {fetchURLs} from "~/utils/fetchUrls";
 
 const {params} = useRoute()
 const characters = ref()
 
-const {data: episode, pending, error} = await useFetch(`https://rickandmortyapi.com/api/episode/${params.id}`)
+const {data: episode, pending, error} = await useFetch(`${episodeURl}/${params.id}`)
 
 fetchURLs(episode.value.characters)
     .then(data => characters.value = data)
@@ -38,20 +39,12 @@ fetchURLs(episode.value.characters)
             <v-col
                 v-for="char in characters"
                 :key="char.name"
-                cols="12"
-                sm="12"
-                md="2"
+                cols="auto"
             >
-              <v-card
-
-                  width="200"
-              >
-                <v-img
-                    :src="char.image"
-                    width="300"
-                />
-                <v-card-title>{{ char.name }}</v-card-title>
-              </v-card>
+              <CharacterCard
+                  v-bind="char"
+                  :key="char.id"
+              />
             </v-col>
           </v-row>
         </v-data-iterator>

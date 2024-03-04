@@ -1,18 +1,26 @@
 <script setup>
-const page = ref(1)
-const {data: episodes, error, pending} = useFetch('https://rickandmortyapi.com/api/episode', {
-  query: {page},
-})
+import {useFetchAllData} from "~/composables/useFetchAllData.js";
+import {episodeURl} from "~/constants.js";
 
+const page = ref(1)
+const {data: episodes, error, pending} = useFetchAllData(episodeURl, page)
 </script>
 
 <template>
+
   <v-container>
     <h1 class="text-h4 font-weight-bold d-flex justify-space-between mb-4 align-center">
       Episodes
     </h1>
+    
+    <v-card v-if="error">
+      <v-card-text>Something went wrong</v-card-text>
+    </v-card>
+    <v-card v-else-if="pending">
+      <v-card-text>Loading...</v-card-text>
+    </v-card>
 
-    <v-table>
+    <v-table v-else>
       <thead>
       <tr>
         <th class="text-left">
@@ -42,29 +50,7 @@ const {data: episodes, error, pending} = useFetch('https://rickandmortyapi.com/a
       </tbody>
     </v-table>
 
-    <div class="d-flex align-center justify-center pa-4">
-      <v-btn
-          :disabled="page === 1"
-          icon="mdi-arrow-left"
-          density="comfortable"
-          variant="tonal"
-          rounded
-          @click="page--"
-      />
-
-      <div class="mx-2 text-caption">
-        Page {{ page }} of {{ episodes.info.pages }}
-      </div>
-
-      <v-btn
-          :disabled="page >= episodes.info.pages"
-          icon="mdi-arrow-right"
-          density="comfortable"
-          variant="tonal"
-          rounded
-          @click="page++"
-      />
-    </div>
+    <pagination :page="page" :pages="episodes?.info.pages" :go-next="() => page++" :go-prev="() => page--"/>
 
   </v-container>
 </template>
